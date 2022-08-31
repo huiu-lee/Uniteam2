@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Laser
+  - Enemy
+  - Scratching
+  - Clickable_Scene
+  - medicine
+  - NoClick
+  - Ch5_S1_Collider
+  - Ch5_S2_Collider
+  - Ch5_S3_Collider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Iillust
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 556271157
+    locked: 0
+  - name: DialogBox
+    uniqueID: 94288075
+    locked: 0
+  - name: Dialog
+    uniqueID: 3182012871
+    locked: 0
+  - name: Item
+    uniqueID: 2587367955
+    locked: 0
+  - name: Canvas
+    uniqueID: 4141259563
+    locked: 0
+  - name: Collider
+    uniqueID: 3846262079
+    locked: 0

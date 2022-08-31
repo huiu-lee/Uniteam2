@@ -1,0 +1,4 @@
+zipper	basic	지퍼	1	FALSE
+pouch	basic	파우치	1	FALSE
+phone	basic	핸드폰	1	FALSE
+openpouch	compose	열린파우치	1	FALSE

@@ -1,0 +1,1 @@
+[{"Name":"zipper","Type":"Basic","Explain":"지퍼","Number":"10","isUsing":false},{"Name":"pouch","Type":"Basic","Explain":"파우치","Number":"1","isUsing":true},{"Name":"phone","Type":"Basic","Explain":"핸드폰","Number":"1","isUsing":true},{"Name":"openpouch","Type":"Compose","Explain":"열린파우치","Number":"1","isUsing":true}]
