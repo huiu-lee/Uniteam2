@@ -4611,7 +4611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &436117531
 Transform:
   m_ObjectHideFlags: 0
@@ -12579,12 +12579,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923906181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 1836596969}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924163726
 GameObject:
@@ -25584,6 +25584,7 @@ Transform:
   - {fileID: 709093927}
   - {fileID: 355749891}
   - {fileID: 365540664}
+  - {fileID: 923906183}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28661,21 +28662,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 337.6913, y: -31.34098}
+  scrollPos: {x: 194.07217, y: -208.57472}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 642
-  zoom: 0.76000017
+  zoom: 0.7600002
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2107786208}
-  selectedCommands:
-  - {fileID: 2107786388}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 2107786265}
   - {fileID: 2107786268}
@@ -32870,7 +32869,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 120.17259
     y: 498.9359
-    width: 148.68419
+    width: 148.68417
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -33071,7 +33070,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 456.24646
-    y: 389.57388
+    y: 390.63773
     width: 111.84209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -35469,7 +35468,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -118.12407
     y: 71.35362
-    width: 130.26314
+    width: 130.26312
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -36085,7 +36084,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -551.0013
     y: 67.894424
-    width: 155.26314
+    width: 155.26312
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -37064,7 +37063,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 34e3c3f70dfdd014782810d307897c83, type: 3}
 --- !u!114 &2107786388
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -41594,7 +41593,7 @@ MonoBehaviour:
   shiftOffset: {x: 0, y: 0}
   move: 0
   shiftIntoPlace: 0
-  waitUntilFinished: 0
+  waitUntilFinished: 1
 --- !u!114 &2107786509
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -41624,7 +41623,7 @@ MonoBehaviour:
   shiftOffset: {x: 0, y: 0}
   move: 0
   shiftIntoPlace: 0
-  waitUntilFinished: 0
+  waitUntilFinished: 1
 --- !u!114 &2107786510
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -41667,7 +41666,7 @@ MonoBehaviour:
   itemId: 1986
   indentLevel: 0
   storyText: "\uB2F4\uB2F9 \uACBD\uCC30\uAD00 \uBA85\uD568\uC774\uB2E4. \uBBFC\uACBD\uC704
-    \uC774\uB984\uACFC \uC5F0\uB77D\uCC98\uAC00 \uC801\uD600 \uC788\uB2E4."
+    \uC774\uB984\uACFC \uC5F0\uB77D\uCC98\uAC00 \uC801\uD600 \uC788\uC5B4."
   description: 
   character: {fileID: 1663287954}
   portrait: {fileID: 21300000, guid: 595e036f6a3b15648a645a4a0884c3e7, type: 3}
@@ -42142,7 +42141,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -110.821
     y: 313.46115
-    width: 130.26314
+    width: 130.26312
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -42492,7 +42491,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 36.054684
     y: 199.95851
-    width: 98.684204
+    width: 98.6842
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -42552,7 +42551,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -230.8601
     y: 174.13571
-    width: 98.684204
+    width: 98.6842
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -43933,7 +43932,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 107.94319
     y: 409.4473
-    width: 155.26314
+    width: 155.26312
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -44255,7 +44254,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 130.54309
     y: 311.46652
-    width: 93.42104
+    width: 93.421036
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -46654,7 +46653,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 575.3154
     y: 390.0648
-    width: 147.36841
+    width: 147.3684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -52354,7 +52353,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -547.0737
     y: 207.7974
-    width: 113.15788
+    width: 113.157875
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
