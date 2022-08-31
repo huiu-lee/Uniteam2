@@ -5,7 +5,7 @@ using UnityEngine;
 public class SaveSet : MonoBehaviour
 {
     private Transform chap1, chap2, chap3, chap4;
-    private GameObject lockch1, lockch2, lockch3, lockch4;
+    //private GameObject lockch1, lockch2, lockch3, lockch4;
     TextAsset savedata; // json file Loader
     string stage;
     List<string> stages;
@@ -20,11 +20,12 @@ public class SaveSet : MonoBehaviour
         chap3 = GameObject.Find("Content").transform.Find("Stage 3");
         chap4 = GameObject.Find("Content").transform.Find("Stage 4");
 
-        lockch1 = GameObject.Find("lock_stage1");
-        lockch2 = GameObject.Find("lock_stage2");
-        lockch3 = GameObject.Find("lock_stage3");
-        lockch4 = GameObject.Find("lock_stage4");
-        // Debug.Log(DataController.Instance.gameData.2isClear1);
+        //for chapter Lock Function
+        //lockch1 = GameObject.Find("lock_stage1");
+        //lockch2 = GameObject.Find("lock_stage2");
+        //lockch3 = GameObject.Find("lock_stage3");
+        //lockch4 = GameObject.Find("lock_stage4");
+        Debug.Log(DataController.Instance.gameData.isClear1);
         Debug.Log(GameManager.isClear1);
         Debug.Log(GameManager.isClear2);
 
@@ -38,20 +39,20 @@ public class SaveSet : MonoBehaviour
     {
         if (GameManager.chapterNumber == 1)       // if (DataController.Instance.gameData.chapterNumbe1r123 == 1)
         {
-            lockch1.SetActive(false);
+            //lockch1.SetActive(false);
             chap1.gameObject.SetActive(true);
             GameManager.isClear1 = true;
         }
         else if (GameManager.chapterNumber == 2)
         {
-            lockch2.SetActive(false);
+            //lockch2.SetActive(false);
             chap2.gameObject.SetActive(true);
             GameManager.isClear1 = true;
             GameManager.isClear2 = true;
         }
         else if (GameManager.chapterNumber == 3)
         {
-            lockch3.SetActive(false);
+            //lockch3.SetActive(false);
             chap3.gameObject.SetActive(true);
             GameManager.isClear1 = true;
             GameManager.isClear2 = true;
@@ -59,7 +60,7 @@ public class SaveSet : MonoBehaviour
         }
         else if (GameManager.chapterNumber == 4)
         {
-            lockch4.SetActive(false);
+            //lockch4.SetActive(false);
             chap4.gameObject.SetActive(true);
             GameManager.isClear1 = true;
             GameManager.isClear2 = true;
@@ -80,22 +81,22 @@ public class SaveSet : MonoBehaviour
     {   
         if(GameManager.isClear1 == true)   //if (DataController.Instance.gameData.2isClear1 == true)
         {
-            lockch1.SetActive(false);
+            //lockch1.SetActive(false);
             chap1.gameObject.SetActive(true);
         }
         if (GameManager.isClear2 == true)
         {
-            lockch2.SetActive(false);
+            //lockch2.SetActive(false);
             chap2.gameObject.SetActive(true);
         }
         if (GameManager.isClear3 == true)
         {
-            lockch3.SetActive(false);
+            //lockch3.SetActive(false);
             chap3.gameObject.SetActive(true);
         }
         if (GameManager.isClear4 == true)
         {
-            lockch4.SetActive(false);
+            //lockch4.SetActive(false);
             chap4.gameObject.SetActive(true);
         }
     }
