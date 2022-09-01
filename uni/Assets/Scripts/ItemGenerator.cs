@@ -142,6 +142,56 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
+            else if (selected1 == "3_kpencilcase")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 3_kpencilcase");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+             else if (selected1 == "4_nclutch")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_nclutch");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+
+            else if (selected1 == "4_jframe")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_jframe");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+            else if (selected1 == "4_hwallet")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_hwallet");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+
             else
             {
                 Flowchart.BroadcastFungusMessage("Wrong item Decompose");
