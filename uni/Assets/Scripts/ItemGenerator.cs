@@ -205,8 +205,24 @@ public class ItemGenerator : MonoBehaviour
 
     public void Use()
     {
+        if (selectCount == 1 && selected1 == "0_usb" && flowchart.GetStringVariable("stageFlag1") == "지안책상" && flowchart.GetBooleanVariable("useUsb") == false 
+        && flowchart.GetIntegerVariable("stageFlag2") == 1 && flowchart.GetStringVariable("enteredPwd") == "0216")
+        {   
+            Flowchart.BroadcastFungusMessage("Use usb");
+            InitializeInventory();
+
+            flowchart.SetBooleanVariable("useUsb", true);
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
+
         
-        if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
+        else if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
         {   
             Flowchart.BroadcastFungusMessage("Use spray");
             InitializeInventory();
