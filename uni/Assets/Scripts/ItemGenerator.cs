@@ -28,7 +28,7 @@ public class ItemGenerator : MonoBehaviour
     int buttonCount = 14;
 
     string preBtnName = "";
-    
+
     string selected1;
     string selected2;
 
@@ -39,7 +39,7 @@ public class ItemGenerator : MonoBehaviour
     void Start()
     {
         //Slot �Ҵ�
-        for(int i = 1; i < buttonCount + 1; i++)
+        for (int i = 1; i < buttonCount + 1; i++)
         {
             string objName = "Slot" + i;
             Slots.Add(GameObject.Find(objName).GetComponent<Image>());
@@ -64,19 +64,19 @@ public class ItemGenerator : MonoBehaviour
         count = 0;
 
         foreach (GameObject item in items)
-        {   
+        {
             ItemPos[count].sprite = item.GetComponent<SpriteRenderer>().sprite;
             ItemPos[count].gameObject.SetActive(true);
 
             count++;
         }
-        
+
     }
 
     #region �ռ��ϱ� ��ư
     public void Combine()
     {
-        if(selectCount == 2)
+        if (selectCount == 2)
         {
 
             if (selected1 == "1_zipper" && selected2 == "1_pouch" || selected1 == "1_pouch" && selected2 == "1_zipper")
@@ -90,7 +90,7 @@ public class ItemGenerator : MonoBehaviour
                 }
                 selectCount = 0;
             }
-            else if(selected1 == "1_battery" && selected2 == "1_phone" || selected1 == "1_phone" && selected2 == "1_battery")
+            else if (selected1 == "1_battery" && selected2 == "1_phone" || selected1 == "1_phone" && selected2 == "1_battery")
             {
                 Flowchart.BroadcastFungusMessage("Combine phone & battery");
                 InitializeInventory();
@@ -102,7 +102,7 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
-            else if(selected1 == "2_pencil" && selected2 == "2_imnote1" || selected1 == "2_imnote1" && selected2 == "2_pencil")
+            else if (selected1 == "2_pencil" && selected2 == "2_imnote1" || selected1 == "2_imnote1" && selected2 == "2_pencil")
             {
                 Flowchart.BroadcastFungusMessage("Combine pencil & note");
                 InitializeInventory();
@@ -113,7 +113,7 @@ public class ItemGenerator : MonoBehaviour
                 }
                 selectCount = 0;
             }
-            
+
             else
             {
                 Flowchart.BroadcastFungusMessage("Wrong item combine");
@@ -128,7 +128,7 @@ public class ItemGenerator : MonoBehaviour
 
     public void Decompose()
     {
-        if(selectCount == 1)
+        if (selectCount == 1)
         {
             if (selected1 == "2_keyset")
             {
@@ -141,6 +141,56 @@ public class ItemGenerator : MonoBehaviour
                 }
                 selectCount = 0;
             }
+
+            else if (selected1 == "3_kimpencilcase")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose pencilcase");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+            else if (selected1 == "4_nclutch")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_nclutch");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+
+            else if (selected1 == "4_jframe")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_jframe");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+            else if (selected1 == "4_hwallet")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 4_hwallet");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
 
             else
             {
@@ -155,9 +205,25 @@ public class ItemGenerator : MonoBehaviour
 
     public void Use()
     {
-        
-        if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
-        {   
+        if (selectCount == 1 && selected1 == "0_usb" && flowchart.GetStringVariable("stageFlag1") == "지안책상" && flowchart.GetBooleanVariable("useUsb") == false
+        && flowchart.GetIntegerVariable("stageFlag2") == 1 && flowchart.GetStringVariable("enteredPwd") == "0216")
+        {
+            Flowchart.BroadcastFungusMessage("Use usb");
+            InitializeInventory();
+
+            flowchart.SetBooleanVariable("useUsb", true);
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
+
+
+        else if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
+        {
             Flowchart.BroadcastFungusMessage("Use spray");
             InitializeInventory();
 
@@ -189,16 +255,16 @@ public class ItemGenerator : MonoBehaviour
 
     #region ��ư ���ý�
     public void ButtonSelected(Image btn)
-    {  
+    {
         //nothing unselect
-        if(preBtnName != btn.name)
+        if (preBtnName != btn.name)
         {
             btn.sprite = selectedImage;
             selectCount++;
             preBtnName = btn.name;
-            
+
         }
-        else if(selectCount == 1)
+        else if (selectCount == 1)
         {
             btn.sprite = unselectedImage;
             selectCount--;
@@ -222,10 +288,10 @@ public class ItemGenerator : MonoBehaviour
 
         if (selectCount == 1)
         {
-           selected1 = ItemPos[int.Parse(btn.name[4].ToString()) - 1].sprite.name.ToString();
+            selected1 = ItemPos[int.Parse(btn.name[4].ToString()) - 1].sprite.name.ToString();
             Debug.Log("selected1 : " + selected1);
         }
-        else if(selectCount == 2)
+        else if (selectCount == 2)
         {
             selected2 = ItemPos[int.Parse(btn.name[4].ToString()) - 1].sprite.name.ToString();
             Debug.Log("selected2 : " + selected2);
@@ -236,13 +302,13 @@ public class ItemGenerator : MonoBehaviour
             selected2 = "";
         }
 
-        
+
 
         Debug.Log("selectCount : " + selectCount);
     }
     #endregion
 
-    
+
 
 
     #region clear inventory
@@ -258,7 +324,7 @@ public class ItemGenerator : MonoBehaviour
 
     public void ShowItemDetail(int num)
     {
-        if(ItemPos[num].sprite != null)
+        if (ItemPos[num].sprite != null)
         {
             string itemName = ItemPos[num].sprite.name;
             flowchart.SetStringVariable("itemDetail", itemName);

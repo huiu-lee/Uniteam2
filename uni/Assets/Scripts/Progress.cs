@@ -19,32 +19,51 @@ public class Progress : MonoBehaviour
 
     }
 
-    void progresscontrol()
+    public void pgcontrol()
     {
-        if(GameManager.isClear1 == true)
+        if (GameManager.isClear1 == true)
         {
             per0.text = "100 %";
-            print("È®¤·;¤¤");
+            
         }
 
-        else if(GameManager.curScene == 1)
+        else if (GameManager.curScene == 1)
         {
+            per0.text = "100 %";
+            per1.text = "100 %";
+
+        }
+
+        else if (GameManager.curScene == 2)
+        {
+            per0.text = "100 %";
+            per1.text = "100 %";
             per2.text = "100 %";
+
         }
 
-        else if (GameManager.curScene == 1)
+        else if (GameManager.curScene == 3)
         {
+            per0.text = "100 %";
+            per1.text = "100 %";
+            per2.text = "100 %";
             per3.text = "100 %";
+
         }
 
-        else if (GameManager.curScene == 1)
+        else if (GameManager.curScene == 4)
         {
+            per0.text = "100 %";
+            per1.text = "100 %";
+            per2.text = "100 %";
+            per3.text = "100 %";
             per4.text = "100 %";
+
         }
 
-        else if (GameManager.curScene == 1)
+        else if (GameManager.curScene == 5)
         {
-            per5.text = "100 %";
+            //per6.text = "100 %";
         }
     }
 }

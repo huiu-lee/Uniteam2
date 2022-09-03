@@ -31,18 +31,23 @@ public class Rotate : MonoBehaviour
 
         for (int i = 0; i <= 11; i++)
         {
-            transform.position = transform.position + new Vector3(0, -0.1f, 0);
+            transform.position = transform.position + new Vector3(0, -0.11f, 0);
             yield return new WaitForSeconds(0.01f);
-        }
-    
-        coroutineAllowed = true;
-        numberShown += 1;
 
-        if (numberShown > 9){
-            numberShown = 0;
         }
+
+        coroutineAllowed = true;
+        numberShown -= 1;
+
+        //not functional
+        //if (numberShown == 10){
+        //    //numberShown = 1; //not functional
+        //    dial1.transform.position = new Vector3(70, -53.55f, 0);
+        //}
 
         Rotated(name, numberShown);
-    
+
+        print(name + " : " + numberShown);
+
     }
 }

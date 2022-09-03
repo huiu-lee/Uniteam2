@@ -1258,7 +1258,6 @@ GameObject:
   - component: {fileID: 458558319}
   - component: {fileID: 458558318}
   - component: {fileID: 458558322}
-  - component: {fileID: 458558323}
   - component: {fileID: 458558333}
   - component: {fileID: 458558332}
   - component: {fileID: 458558330}
@@ -1272,6 +1271,7 @@ GameObject:
   - component: {fileID: 458558334}
   - component: {fileID: 458558331}
   - component: {fileID: 458558326}
+  - component: {fileID: 458558323}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1340,8 +1340,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 458558317}
   - {fileID: 458558318}
-  - {fileID: 458558323}
   - {fileID: 458558300}
+  - {fileID: 458558323}
   suppressAllAutoSelections: 0
 --- !u!114 &458558303
 MonoBehaviour:
@@ -1368,9 +1368,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 458558328}
+  - {fileID: 458558302}
   selectedCommands:
-  - {fileID: 458558326}
+  - {fileID: 458558323}
   variables: []
   description: 
   stepPause: 0
@@ -1759,10 +1759,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 40
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!114 &458558324
 MonoBehaviour:
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &458558326
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   itemId: 39
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!114 &458558327
 MonoBehaviour:
@@ -1897,7 +1897,7 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &458558331
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   itemId: 38
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!114 &458558332
 MonoBehaviour:
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &458558334
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1973,11 +1973,11 @@ MonoBehaviour:
   itemId: 37
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!114 &458558335
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1990,11 +1990,11 @@ MonoBehaviour:
   itemId: 36
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!114 &458558336
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   itemId: 35
   indentLevel: 0
   targetObject: {fileID: 1127947717}
-  methodName: progresscontrol()
+  methodName: pgcontrol
   delay: 0
 --- !u!1 &467284482
 GameObject:
