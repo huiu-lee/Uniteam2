@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Progress : MonoBehaviour
 {
     public Text per0, per1, per2, per3, per4, per5;
+    public GameObject progressbar;
+    private float x;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,9 @@ public class Progress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        x = GameObject.Find("Stage 0").transform.position.x;
+        print(x);
+        progressbar.transform.position = new Vector3(x, 0, 0);
     }
 
     public void pgcontrol()
