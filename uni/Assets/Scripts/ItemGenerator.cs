@@ -247,6 +247,32 @@ public class ItemGenerator : MonoBehaviour
             selectCount = 0;
         }
 
+        else if (selectCount == 1 && selected1 == "2_storekey")
+        {
+            Flowchart.BroadcastFungusMessage("Use storekey");
+            InitializeInventory();
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
+
+        else if (selectCount == 1 && selected1 == "3_nophone")
+        {
+            Flowchart.BroadcastFungusMessage("Use phone");
+            InitializeInventory();
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
+
         else if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
         {
             Flowchart.BroadcastFungusMessage("Use spray");
