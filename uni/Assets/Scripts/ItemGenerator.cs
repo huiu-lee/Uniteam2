@@ -206,9 +206,9 @@ public class ItemGenerator : MonoBehaviour
     public void Use()
     {
         if (selectCount == 1 && selected1 == "0_usb" && flowchart.GetStringVariable("stageFlag1") == "지안책상" && flowchart.GetBooleanVariable("useUsb") == false
-        && flowchart.GetIntegerVariable("stageFlag2") == 1 && flowchart.GetStringVariable("enteredPwd") == "0216")
+        && flowchart.GetIntegerVariable("stageFlag2") == 1)
         {
-            Flowchart.BroadcastFungusMessage("Use usb");
+            Flowchart.BroadcastFungusMessage("usb_to_notebook_click");
             InitializeInventory();
 
             flowchart.SetBooleanVariable("useUsb", true);
@@ -221,6 +221,31 @@ public class ItemGenerator : MonoBehaviour
             selectCount = 0;
         }
 
+        else if (selectCount == 1 && selected1 == "2_entrylist")
+        {
+            Flowchart.BroadcastFungusMessage("Use entrylist");
+            InitializeInventory();
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
+
+        else if (selectCount == 1 && selected1 == "2_toiletkey")
+        {
+            Flowchart.BroadcastFungusMessage("Use toiletkey");
+            InitializeInventory();
+
+            foreach (Image slot in Slots)
+            {
+                slot.sprite = unselectedImage;
+            }
+
+            selectCount = 0;
+        }
 
         else if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
         {
