@@ -205,100 +205,79 @@ public class ItemGenerator : MonoBehaviour
 
     public void Use()
     {
-        if (selectCount == 1 && selected1 == "0_usb" && flowchart.GetStringVariable("stageFlag1") == "지안책상" && flowchart.GetBooleanVariable("useUsb") == false
-        && flowchart.GetIntegerVariable("stageFlag2") == 1)
-        {
-            Flowchart.BroadcastFungusMessage("usb_to_notebook_click");
-            InitializeInventory();
-
-            flowchart.SetBooleanVariable("useUsb", true);
-
-            foreach (Image slot in Slots)
+        if (selectCount == 1)
+        {   
+            if (selected1 == "0_usb" && flowchart.GetStringVariable("stageFlag1") == "지안책상" && flowchart.GetBooleanVariable("useUsb") == false
+            && flowchart.GetIntegerVariable("stageFlag2") == 1)
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("usb_to_notebook_click");
+                InitializeInventory();
+
+                flowchart.SetBooleanVariable("useUsb", true);
+
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "2_entrylist")
-        {
-            Flowchart.BroadcastFungusMessage("Use entrylist");
-            InitializeInventory();
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "2_entrylist")
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use entrylist");
+                InitializeInventory();
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "2_toiletkey")
-        {
-            Flowchart.BroadcastFungusMessage("Use toiletkey");
-            InitializeInventory();
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "2_toiletkey")
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use toiletkey");
+                InitializeInventory();
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "2_storekey")
-        {
-            Flowchart.BroadcastFungusMessage("Use storekey");
-            InitializeInventory();
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "2_storekey")
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use storekey");
+                InitializeInventory();
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "3_nophone")
-        {
-            Flowchart.BroadcastFungusMessage("Use phone");
-            InitializeInventory();
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "3_nophone")
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use phone");
+                InitializeInventory();
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
-        {
-            Flowchart.BroadcastFungusMessage("Use spray");
-            InitializeInventory();
-
-            flowchart.SetBooleanVariable("useSpray", true);
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "1_spray" && flowchart.GetIntegerVariable("stageNum") == 2 && flowchart.GetBooleanVariable("useSpray") == false)
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use spray");
+                InitializeInventory();
+
+                flowchart.SetBooleanVariable("useSpray", true);
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
-        }
-
-        else if (selectCount == 1 && selected1 == "5_lplanner1" && flowchart.GetIntegerVariable("stageNum") == 3)
-        {
-            Flowchart.BroadcastFungusMessage("Use Planner");
-            InitializeInventory();
-
-            foreach (Image slot in Slots)
+            else if (selected1 == "1_phone" && flowchart.GetBooleanVariable("monitor") == false)
             {
-                slot.sprite = unselectedImage;
+                Flowchart.BroadcastFungusMessage("Use phone to monitor");
+                InitializeInventory();
+
+                flowchart.SetBooleanVariable("monitor", true);
+
+                selectCount = 0;
             }
 
-            selectCount = 0;
+            else if (selected1 == "5_lplanner1" && flowchart.GetIntegerVariable("stageNum") == 3)
+            {
+                Flowchart.BroadcastFungusMessage("Use Planner");
+                InitializeInventory();
+
+                selectCount = 0;
+            }
         }
     }
     #endregion
