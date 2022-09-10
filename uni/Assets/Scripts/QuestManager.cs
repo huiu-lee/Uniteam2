@@ -14,8 +14,6 @@ public class QuestManager : MonoBehaviour
     public GameObject questBtn;
     public GameObject questTxtObj;
     public Text questTxt;
-    public GameObject questAlert;
-
     
     void Start()
     {
@@ -55,13 +53,11 @@ public class QuestManager : MonoBehaviour
         {
             questTxtObj.SetActive(false);
             questBtn.SetActive(false);
-            questAlert.SetActive(false);
         }
         else
         {
             questTxtObj.SetActive(true);
             questBtn.SetActive(true);
-            questAlert.SetActive(true);
             questTxt.text = list[questNum];
         }
     }

@@ -267,6 +267,8 @@ MonoBehaviour:
   questBtn: {fileID: 955160820784321745}
   questTxtObj: {fileID: 955160821224060095}
   questTxt: {fileID: 955160821224060081}
+  questAlert: {fileID: 0}
+  detectiveCanvas: {fileID: 0}
 --- !u!1 &955160821793381544
 GameObject:
   m_ObjectHideFlags: 0
