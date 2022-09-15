@@ -191,6 +191,17 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
+            else if (selected1 == "6_nbag")
+            {
+                Flowchart.BroadcastFungusMessage("Decompose 6_nbag");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
 
             else
             {
@@ -274,6 +285,14 @@ public class ItemGenerator : MonoBehaviour
             else if (selected1 == "5_lplanner1" && flowchart.GetIntegerVariable("stageNum") == 3)
             {
                 Flowchart.BroadcastFungusMessage("Use Planner");
+                InitializeInventory();
+
+                selectCount = 0;
+            }
+
+            else if (selected1 == "6_pkey")
+            {
+                Flowchart.BroadcastFungusMessage("Use UnderKey");
                 InitializeInventory();
 
                 selectCount = 0;
