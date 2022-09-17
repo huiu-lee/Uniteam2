@@ -44,6 +44,18 @@ public class QuestManager : MonoBehaviour
         list.Add("여자 기숙사 방에서 김예지를 조사해보자");
         list.Add("보건실에 가보자");
         list.Add("고혈압 약을 찾아 현성이에게 주자");
+        //chapter 4
+        list.Add("남자 기숙사 노인성의 방을 조사해보자");//21
+        list.Add("노인성 자리를 조사해보자");
+        list.Add("자습실로 가서 장진혁 자리를 조사해보자");
+        list.Add("관리사무소로 가자");
+        list.Add("지갑 내용물을 확인하자");
+        //chapter5
+        list.Add("교무실로 가자");//26
+        list.Add("자습실로 가보자");
+        //chapter6
+        list.Add("교무실로 이동하자");//28
+        list.Add("지하 비품실에 가보자");
     }
 
     void Update()
