@@ -21,34 +21,6 @@ public class DtDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for(int i = 1; i < 54; i++)
-        //{
-        //    if (i < 8)
-        //    {
-        //        choi.text = Dialog0();
-        //    }
-        //    else if (i < 18)
-        //    {
-        //        //dialog.text = Dialog1();
-        //    }
-        //    else if (i < 37)
-        //    {
-        //        //dialog.text = Dialog2();
-        //    }
-        //    else if (i < 44)
-        //    {
-        //        //dialog.text = Dialog3();
-        //    }
-        //    else if (i < 46)
-        //    {
-        //        //dialog.text = Dialog4();
-        //    }
-        //    else if (i < 54)
-        //    {
-        //        //dialog.text = Dialog5();
-        //    }
-        //}
-
         dtnum = flowchart.GetIntegerVariable("dtdialNum");
 
         if (dtnum < 8)
@@ -136,6 +108,21 @@ public class DtDialogue : MonoBehaviour
         else if (dtnum > 59)
         {
             lee.text = Dialog5();
+        }
+        else if (dtnum > 63)
+        {
+            if (dtnum > 63 && dtnum < 66)
+            {
+                kim.text = Dialog6();
+            }
+            else if (dtnum > 65 && dtnum < 68)
+            {
+                park.text = Dialog6();
+            }
+            else
+            {
+                choi.text = Dialog6();
+            }
         }
 
     }
@@ -630,7 +617,40 @@ public class DtDialogue : MonoBehaviour
 
         return x;
     }
-
+    //scene6 dtnum ~70
+    string Dialog6()
+    {
+        string x = "";
+        if (dtnum == 64)
+        {
+            x = "예지: \n 지안아…  시험 잘 봤어…? 우욱… \n\n 지안: \n 헉 너 왜그래…!화장실 가자. \n";
+        }
+        else if (dtnum == 65)
+        {
+            x = "예지: \n 지안아…  시험 잘 봤어…? 우욱… \n\n 지안: \n 헉 너 왜그래…! 화장실 가자. \n\n 예지: \n 우우욱… 허억.. 허억… \n\n 지안: \n 이제 속 괜찮아…? \n\n 예지: \n 아 괜찮아~~!! 꺼져 X발… \n\n …상태가 안좋아 보인다. 조용히 교무실이나 가자. \n";
+        }
+        else if (dtnum == 66)
+        {
+            x = "기현: \n 시험은 잘 봤니? \n\n 지안: \n 아 네… 그럭저럭 본 것 같습니다. \n\n 기현: \n 어휴. 그럭저럭이라니.내년에도 이 학원에 있을 생각인가 ? \n";
+        }
+        else if (dtnum == 67)
+        {
+            x = "기현: \n 시험은 잘 봤니? \n\n 지안: \n 아 네… 그럭저럭 본 것 같습니다. \n\n 기현: \n 어휴. 그럭저럭이라니. 내년에도 이 학원에 있을 생각인가? \n정답표 애들 나눠주고 꼭 오늘 내로 가채점 하라고 해. \n\n 지안: \n 네 \n\n 선생님 책상에 특이한 모양의 열쇠가 있는데… 한 번 여쭤볼까? \n\n 지안: \n 선생님 이 열쇠는 뭔가요? \n\n 기현: \n 학원 지하비품실 열쇠다. 궁금한 것도 많네. 빨리 가서 공부 안해? \n";
+        }
+        else if (dtnum == 68)
+        {
+            x = "현성: \n 지안아!! \n\n !! \n\n 현성: \n 여기서 뭐해!! 너 괜찮아? \n\n 지안: \n 허억… 어어… 나 괜찮아… \n";
+        }
+        else if (dtnum == 69)
+        {
+            x = "현성: \n 지안아!! \n\n !! \n\n 현성: \n 여기서 뭐해!! 너 괜찮아? \n\n 지안: \n 허억… 어어… 나 괜찮아… \n\n 현성: \n 여기서 왜 이러고 있어!! 안색이… 그럴 줄 알고 내가 네 부적도 가져왔어. 자, 받아. 오늘은 이거 베개에 넣고 푹 자. \n\n 지안: \n 아니야 괜찮아… 같이 나가자… \n\n 현성: \n 너 연락 안돼서 얼마나 놀랐는데~ 너까지 이러니까 스트레스 받아서 손목에 칼 그으려다가 선생님이 말 걸어서 못했어! 다음에 또 그러면 나 그을 거야.. 알겠지? 가자. \n";
+        }
+        else if (dtnum == 70)
+        {
+            x = "현성: \n 지안아!! \n\n !! \n\n 현성: \n 여기서 뭐해!! 너 괜찮아? \n\n 지안: \n 허억… 어어… 나 괜찮아… \n\n 현성: \n 여기서 왜 이러고 있어!! 안색이… 그럴 줄 알고 내가 네 부적도 가져왔어. 자, 받아. 오늘은 이거 베개에 넣고 푹 자. \n\n 지안: \n 아니야 괜찮아… 같이 나가자… \n\n 현성: \n 너 연락 안돼서 얼마나 놀랐는데~ 너까지 이러니까 스트레스 받아서 손목에 칼 그으려다가 선생님이 말 걸어서 못했어! 다음에 또 그러면 나 그을 거야.. 알겠지? 가자. \n\n … \n\n 지안: \n 응… \n\n 날 데리러 온 현성이도 정상이 아닌 것 같다. \n\n 그 날… 무슨 일이 있었던 걸까. \n\n 학원에 있는 모두가 의심스럽다. \n";
+        }
+        return x;
+    }
 
 
 
@@ -977,5 +997,38 @@ public class DtDialogue : MonoBehaviour
         }
         else
             lee.text = Dialog5();
+    }
+
+    //scene6 kim
+    public void Whole14()
+    {
+        if (dtnum > 65)
+        {
+            kim.text = "예지: \n 지안아…  시험 잘 봤어…? 우욱… \n\n 지안: \n 헉 너 왜그래…! 화장실 가자. \n\n 예지: \n 우우욱… 허억.. 허억… \n\n 지안: \n 이제 속 괜찮아…? \n\n 예지: \n 아 괜찮아~~!! 꺼져 X발… \n\n …상태가 안좋아 보인다. 조용히 교무실이나 가자. \n";
+        }
+        else
+            kim.text = Dialog6();
+    }
+    //scene6 park
+    public void Whole15()
+    {
+        if (dtnum > 67)
+        {
+            park.text = "기현: \n 시험은 잘 봤니? \n\n 지안: \n 아 네… 그럭저럭 본 것 같습니다. \n\n 기현: \n 어휴. 그럭저럭이라니. 내년에도 이 학원에 있을 생각인가? \n정답표 애들 나눠주고 꼭 오늘 내로 가채점 하라고 해. \n\n 지안: \n 네 \n\n 선생님 책상에 특이한 모양의 열쇠가 있는데… 한 번 여쭤볼까? \n\n 지안: \n 선생님 이 열쇠는 뭔가요? \n\n 기현: \n 학원 지하비품실 열쇠다. 궁금한 것도 많네. 빨리 가서 공부 안해? \n";
+        }
+        else
+            park.text = Dialog6();
+    }
+    //scene6 choi
+    public void Whole16()
+    {
+        if (dtnum > 70)
+        {
+            choi.text = "현성: \n 지안아!! \n\n !! \n\n 현성: \n 여기서 뭐해!! 너 괜찮아? \n\n 지안: \n 허억… 어어… 나 괜찮아… \n\n 현성: \n 여기서 왜 이러고 있어!! 안색이… 그럴 줄 알고 내가 네 부적도 가져왔어. 자, 받아. 오늘은 이거 베개에 넣고 푹 자. \n\n 지안: \n 아니야 괜찮아… 같이 나가자… \n\n 현성: \n 너 연락 안돼서 얼마나 놀랐는데~ 너까지 이러니까 스트레스 받아서 손목에 칼 그으려다가 선생님이 말 걸어서 못했어! 다음에 또 그러면 나 그을 거야.. 알겠지? 가자. \n\n … \n\n 지안: \n 응… \n\n 날 데리러 온 현성이도 정상이 아닌 것 같다. \n\n 그 날… 무슨 일이 있었던 걸까. \n\n 학원에 있는 모두가 의심스럽다. \n";
+        }
+        else
+        {
+            choi.text = Dialog6();
+        }
     }
 }

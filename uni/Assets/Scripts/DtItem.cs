@@ -38,15 +38,35 @@ public class DtItem : MonoBehaviour
             //4_nenv
             GameObject.Find("Dt_GameObject").transform.GetChild(2).gameObject.SetActive(true);
         }
+        //if (flowchart.GetIntegerVariable("dtitemNum") > 4)
+        //{
+        //    //6_pexam
+        //    GameObject.Find("Dt_GameObject5").transform.GetChild(2).gameObject.SetActive(true);
+        //}
+        //if (flowchart.GetIntegerVariable("dtitemNum") > 5)
+        //{
+        //    //6_receipt
+        //    GameObject.Find("Dt_GameObject6").transform.GetChild(2).gameObject.SetActive(true);
+        //}
+        //if (flowchart.GetIntegerVariable("dtitemNum") > 6)
+        //{
+        //    //6_pspanner
+        //    GameObject.Find("Dt_GameObject7").transform.GetChild(2).gameObject.SetActive(true);
+        //}
+        //if (flowchart.GetIntegerVariable("dtitemNum") > 7)
+        //{
+        //    //6_nclothes
+        //    GameObject.Find("Dt_GameObject8").transform.GetChild(2).gameObject.SetActive(true);
+        //}
 
 
 
         //Detective Diary Memory Control
-        if (flowchart.GetIntegerVariable("dtmemNum") == 1)
+        if (flowchart.GetIntegerVariable("dtmemNum") > 0)
         {
             GameObject.Find("GameObject_m1").transform.GetChild(0).gameObject.SetActive(true);
         }
-        if (flowchart.GetIntegerVariable("dtmemNum") == 2)
+        if (flowchart.GetIntegerVariable("dtmemNum") > 1)
         {
             GameObject.Find("GameObject_m1").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("GameObject_m2").transform.GetChild(0).gameObject.SetActive(true);
@@ -54,11 +74,21 @@ public class DtItem : MonoBehaviour
             GameObject.Find("GameObject_m3").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("GameObject_m3").transform.GetChild(1).gameObject.SetActive(true);
         }
-        if (flowchart.GetIntegerVariable("dtmemNum") == 3)
+        if (flowchart.GetIntegerVariable("dtmemNum") > 2)
         {
             GameObject.Find("GameObject_m4").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("GameObject_m4").transform.GetChild(1).gameObject.SetActive(true);
             GameObject.Find("GameObject_m5").transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+
+    public void Mem()
+    {
+        if (flowchart.GetIntegerVariable("dtmemNum") > 3)
+        {
+            Debug.Log("hi");
+            GameObject.Find("GameObject_m5").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("GameObject_m6").transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }
