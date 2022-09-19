@@ -43,7 +43,7 @@ public class Dragable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             ItemImage = this.transform.GetComponent<Image>().sprite;
             Debug.Log(ItemImage.name);
             childPrefab = Slot.transform.GetChild(0).gameObject;
-            childPrefab.transform.GetComponent<Image>().sprite = ItemImage;;
+            childPrefab.transform.GetComponent<Image>().sprite = ItemImage;
             Slot.transform.SetParent(tragetTransform);
             Debug.Log(tragetTransform);
             
