@@ -114,6 +114,30 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
+            else if (selected1 == "10_earphone" && selected2 == "5_ppen" || selected1 == "5_ppen" && selected2 == "10_earphone")
+            {
+                Flowchart.BroadcastFungusMessage("Combine pen & earphone");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
+            else if (selected1 == "10_monkey" && selected2 == "3_kbattery" || selected1 == "3_kbattery" && selected2 == "10_monkey")
+            {
+                Flowchart.BroadcastFungusMessage("Combine battery & monkey");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
             else
             {
                 Flowchart.BroadcastFungusMessage("Wrong item combine");
@@ -293,6 +317,14 @@ public class ItemGenerator : MonoBehaviour
             else if (selected1 == "6_pkey")
             {
                 Flowchart.BroadcastFungusMessage("Use UnderKey");
+                InitializeInventory();
+
+                selectCount = 0;
+            }
+
+            else if (selected1 == "9_pbankbook")
+            {
+                Flowchart.BroadcastFungusMessage("Use Bankbook");
                 InitializeInventory();
 
                 selectCount = 0;
