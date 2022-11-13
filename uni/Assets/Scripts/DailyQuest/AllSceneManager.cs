@@ -38,4 +38,14 @@ public class AllSceneManager : MonoBehaviour
         GameManager.curScene = 5;
         Debug.Log(GameManager.curScene);
     }
+    void clearScene6()
+    {
+        GameManager.curScene = 6;
+        Debug.Log(GameManager.curScene);
+    }
+    void clearScene7()
+    {
+        GameManager.curScene = 7;
+        Debug.Log(GameManager.curScene);
+    }
 }

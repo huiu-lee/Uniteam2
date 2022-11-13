@@ -30705,7 +30705,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 3373
+  itemId: 3727
   blockName: "\uB0A8\uC790\uAE30\uC219\uC0AC \uB0B4\uBD80"
   description: 
   eventHandler: {fileID: 1125095850}
@@ -30817,7 +30817,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 3373
+  itemId: 3726
   blockName: "\uB0A8\uC790\uAE30\uC219\uC0AC \uBB38"
   description: 
   eventHandler: {fileID: 1125095917}
@@ -31219,7 +31219,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 3646
+  itemId: 3725
   blockName: "\uC774\uC5B4\uD3F0 \uC5F0\uACB0 (Copy)"
   description: 
   eventHandler: {fileID: 1125095933}
@@ -40900,7 +40900,7 @@ MonoBehaviour:
   storyText: {fileID: 1051286020}
   storyTextGO: {fileID: 0}
   characterImage: {fileID: 1611143269}
-  fitTextWithImage: 1
+  fitTextWithImage: 0
   closeOtherDialogs: 0
 --- !u!114 &1595738224
 MonoBehaviour:

@@ -33,11 +33,16 @@ public class LockControl : MonoBehaviour
                 break;
         }
 
-        if (result[0] == correctCombination[0] && result[1] == correctCombination[1] && result[2] == correctCombination[2])
+        if (result[0] == correctCombination[0] && result[2] == correctCombination[2])
         {
             Debug.Log("Open!");
             ck = "ok";
         }
+        //if (result[0] == correctCombination[0] && result[1] == correctCombination[1] && result[2] == correctCombination[2])
+        //{
+        //    Debug.Log("Open!");
+        //    ck = "ok";
+        //}
     }
 
     private void OnDestroy()

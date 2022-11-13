@@ -54,5 +54,9 @@ public class PressControl : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         fillImage.fillAmount = pointerDownTimer / requiredTime;
     }
     
+    public void vibe()
+    {
+        Handheld.Vibrate();
+    }
 
 }

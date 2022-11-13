@@ -138,6 +138,18 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
+            else if (selected1 == "1_phone" && selected2 == "2_entrylist" || selected1 == "2_entrylist" && selected2 == "1_phone")
+            {
+                Flowchart.BroadcastFungusMessage("Combine Phone&list");
+                InitializeInventory();
+
+                foreach (Image slot in Slots)
+                {
+                    slot.sprite = unselectedImage;
+                }
+                selectCount = 0;
+            }
+
             else
             {
                 Flowchart.BroadcastFungusMessage("Wrong item combine");
@@ -254,13 +266,13 @@ public class ItemGenerator : MonoBehaviour
                 selectCount = 0;
             }
 
-            else if (selected1 == "2_entrylist")
-            {
-                Flowchart.BroadcastFungusMessage("Use entrylist");
-                InitializeInventory();
+            //else if (selected1 == "2_entrylist")
+            //{
+            //    Flowchart.BroadcastFungusMessage("Use entrylist");
+            //    InitializeInventory();
 
-                selectCount = 0;
-            }
+            //    selectCount = 0;
+            //}
 
             else if (selected1 == "2_toiletkey")
             {
