@@ -40,10 +40,11 @@ public class Rotate : MonoBehaviour
         numberShown -= 1;
 
         //not functional
-        //if (numberShown == 10){
-        //    //numberShown = 1; //not functional
-        //    dial1.transform.position = new Vector3(70, -53.55f, 0);
-        //}
+        if (numberShown < 0)
+        {
+            numberShown = 9; //not functional
+            this.transform.position = new Vector3(70, -53.55f, 0);
+        }
 
         Rotated(name, numberShown);
 
