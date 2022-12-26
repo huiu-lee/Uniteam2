@@ -25,8 +25,6 @@ public class Dragable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         Vector2 currentPos = eventData.position; 
         this.transform.position = currentPos;
-
-   
     }
 
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)

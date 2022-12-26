@@ -13,6 +13,9 @@ TagManager:
   - Ch5_S1_Collider
   - Ch5_S2_Collider
   - Ch5_S3_Collider
+  - DailyQuest
+  - DailyItem
+  - Character
   layers:
   - Default
   - TransparentFX
